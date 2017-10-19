@@ -13,5 +13,5 @@ import PlaygroundSupport
 //How does a computer work? CPU reads information from the hard disk and brings it to the RAM, this is done b/c before the CPU can do any kind of processing, calculations, computations it has to be brought to the RAM. After the CPU has modified the data it is then stored back onto the hard disk
 //What is an operating system? OS/Controls all the parts of a computer, hardware and software. Allocates resources and schedules tasks
 //What are the main components of iOS (Top - user to Bottom - hardware)? Cocoa Touch, Media, Core Services, Core OS
-
+//What are the 5 states of a UIButton? The five states that define their appearance: default, highlighted, focused, selected, and disabled
 
