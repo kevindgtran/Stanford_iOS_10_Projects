@@ -10,49 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //property for display text label
+    //property (IBOutlet) for display textLabel, with minimum font size for large numbers
     @IBOutlet weak var display: UILabel!
     
+    //boolean variable to control if userIsTyping is true then continue adding button's current title. If false reset display to just button's current title and set userTyping is true, so we can keep adding more button labels
     var userIsTyping = false
     
-    //method for when buttons are pressed
+    //method (IBAction) for when any of the digit buttons are pressed
     @IBAction func touchDigit(_ sender: UIButton) {
-        if let button = sender.currentTitle {
-            print("\(button) was pressed")
-            //if the user is not typing then keep appending to the display text
+        if let button = sender.currentTitle { //optional binding to safely unwrap currentTitle optional
             if userIsTyping {
-                let textInLabel = display.text!
+                let textInLabel = display.text! //force unwrap text optional
                 display.text = textInLabel + button
             } else {
-                //if the user is in the middle of typing then set the display text to the button title
                 display.text = button
                 userIsTyping = true
             }
         }
     }
     
-    //create a computed property that sets the newValue passed in to a string then to display.text. Then returns that display.text as a double.
+    //Computed property: Takes in newValue and returns it as a Double
+    //gets and returns variable type (casting it to specific type to avoid constantly casting values in code)
+    //sets the display.text as a casted string by passing in the newValue
     var displayValue: Double {
         get {
-            return Double(display.text!)!
+            return Double(display.text!)! //returns the variable
         }
         set {
-            display.text = String(newValue)
+            display.text = String(newValue) //sets the variable
         }
     }
     
     @IBAction func operation(_ sender: UIButton) {
-        //set the userIsTyping to false on all operations
-        userIsTyping = false
+        userIsTyping = false //set the userIsTyping to false on all operations
         if let operationTitle = sender.currentTitle {
             switch operationTitle {
             case "π":
                 displayValue = Double.pi
-            //display.text = String(Double.pi)
             case "√":
                 displayValue = sqrt(displayValue)
-                //let doubleValue = Double(display.text!)!
-            //display.text = String(Int(sqrt(doubleValue)))
             default:
                 break
             }
@@ -60,3 +56,4 @@ class ViewController: UIViewController {
     }
 }
 
+//notes: Ctrl + I cleans up code indentation
