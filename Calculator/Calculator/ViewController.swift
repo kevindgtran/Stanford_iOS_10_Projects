@@ -41,19 +41,26 @@ class ViewController: UIViewController {
         }
     }
     
+    //Create a variable to the model "brain". Private as we only want this controller to access the model "brain". This is the communication from the controller to the model
+    private var brain = CalculatorBrain()
+    
     @IBAction func operation(_ sender: UIButton) {
-        userIsTyping = false //set the userIsTyping to false on all operations
+        //if the user is in the middle of typing then tell the brain to set the operand to the display
+        if userIsTyping {
+            brain.setOperand(displayValue)
+            userIsTyping = false //set the userIsTyping to false on all operations
+        }
+        //else if the user is not typing tell the brain to perform operation
         if let operationTitle = sender.currentTitle {
-            switch operationTitle {
-            case "π":
-                displayValue = Double.pi
-            case "√":
-                displayValue = sqrt(displayValue)
-            default:
-                break
-            }
+            brain.performOperation(operationTitle)
+        }
+        
+        if let result = brain.result {
+            displayValue = result
         }
     }
 }
 
-//notes: Ctrl + I cleans up code indentation
+//notes:
+//Ctrl + I cleans up code indentation
+//Alt + source file shows that source file in the next assistant editor screen

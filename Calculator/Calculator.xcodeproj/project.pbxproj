@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65665E291F9A910300FCC29B /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65665E281F9A910300FCC29B /* CalculatorBrain.swift */; };
 		65EF66F01F985D1800CC63A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EF66EF1F985D1800CC63A1 /* AppDelegate.swift */; };
 		65EF66F21F985D1800CC63A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EF66F11F985D1800CC63A1 /* ViewController.swift */; };
 		65EF66F51F985D1800CC63A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EF66F31F985D1800CC63A1 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65665E281F9A910300FCC29B /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		65EF66EC1F985D1800CC63A1 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EF66EF1F985D1800CC63A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65EF66F11F985D1800CC63A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				65EF66EF1F985D1800CC63A1 /* AppDelegate.swift */,
-				65EF66F11F985D1800CC63A1 /* ViewController.swift */,
+				65665E281F9A910300FCC29B /* CalculatorBrain.swift */,
 				65EF66F31F985D1800CC63A1 /* Main.storyboard */,
+				65EF66F11F985D1800CC63A1 /* ViewController.swift */,
 				65EF66F61F985D1800CC63A1 /* Assets.xcassets */,
 				65EF66F81F985D1800CC63A1 /* LaunchScreen.storyboard */,
 				65EF66FB1F985D1800CC63A1 /* Info.plist */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65665E291F9A910300FCC29B /* CalculatorBrain.swift in Sources */,
 				65EF66F21F985D1800CC63A1 /* ViewController.swift in Sources */,
 				65EF66F01F985D1800CC63A1 /* AppDelegate.swift in Sources */,
 			);
