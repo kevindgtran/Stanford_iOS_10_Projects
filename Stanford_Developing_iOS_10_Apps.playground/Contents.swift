@@ -21,11 +21,14 @@ import PlaygroundSupport
 //How does the model communicate changes to the data to the controller? The model broadcasts changes to the controller (like a radio station). Then the controller checks what changes were made.
 //Where can we have the MVC architecture in an app? The MVC architecture can be the whole app, on each page, on sub sections of a page, etc.
 //Whats the difference between Classes vs Structs? Class are reference types and structs are value types. Classes live in the heap and have pointers to them. Structs don't live in the heap and are passed around by copies. Class objects reference back to the same object in memory as structs are copies. Classes can subclass and thus have inheritance. Most objects in swift are structs ie strings, ints, etc. Structs properties also get a "free" initializer for all uninitialized values. Class properties have to be initialized with either a value or with the initializer method. B/C structs are copies, if we create methods that change values within the struct, we need to tell swift this copy can change/ mutate with the mutating keyword
+//Whats an enum? A special type with specific values
+//what are associated values? Associated values are additional information that can be stored with each specific enum case. This allows us to store additional information with each enum case. In the enum declaration, we specify the associated value types (can be multiple), then we can pass different associated values when we use that enum case
 //How do you make a variable read-only? Make it a computed property with a getter only. We do this by excluding the set block. The variable's get value can be access through dot notation
 //What is a module? A stand alone group of source files. ie a framework or an application is a module. Modules can be imported into another module with the "import" keyword
 //what is a source file? A single file in a module that can contain multiple class definition, variables, methods, etc.
 //What does the private keyword do? The private keyword has to do with access control (access controll relative to the source file in which the code is in) - controlling how much access is given for different parts of code. Declaring a private variable means it's only accessible from within that source file.
 
+//what is a closure? It allows us to just write the essentials of a function right in line, so we don't have to write a function and call it else where. It's an unnamed function that has special abreviated $ symbols that help make it extremely concise. Closures are great because we can pass to methods when something is complete, when something is animated, when something gives an error. Closures are extremely powerful
 
 
 

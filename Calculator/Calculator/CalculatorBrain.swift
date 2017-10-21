@@ -8,23 +8,80 @@
 
 import Foundation
 
+//create a global function that changes the sign of a number
+func changeSign(operand: Double) -> Double {
+    return -operand
+}
+
 //create a type struct called CalculatorBrain that has all of our calculator "brains" - model - "the apps API"
 struct CalculatorBrain {
     
     //create a private "internal" variable called accumulator. Whis is an optional b/c it may/ may not have a value at times.
     private var accumulator: Double?
     
-    //function to perform certain operations
-    func performOperation(_ symbol: String) {
-//        switch operationTitle {
-//        case "π":
-//            displayValue = Double.pi
-//        case "√":
-//            displayValue = sqrt(displayValue)
-//        default:
-//            break
-//        }
+    //create a new type enum that has 2 potential types and associated values
+    private enum Operation {
+        case constant(Double) //this allows us to create associated values with each enum case
+        case unaryOperation((Double) -> (Double))
+        case binaryOperation((Double, Double) -> Double)
+        case equals
+    }
     
+    //create a dictionary of all the operations to avoid a really long switch case
+    private var operations: [String: Operation] = [
+        "π" : Operation.constant(Double.pi),
+        "e" : Operation.constant(M_E),
+        "√" : Operation.unaryOperation(sqrt),
+        "cos" : Operation.unaryOperation(cos),
+        "±" : Operation.unaryOperation({ -$0 }),
+        //closures for the remaining binaryOperations, infering the types from the enum case binaryOperation
+        "*" : Operation.binaryOperation({ $0 * $1 }),
+        "/" : Operation.binaryOperation({ $0 / $1 }),
+        "+" : Operation.binaryOperation({ $0 + $1 }),
+        "-" : Operation.binaryOperation({ $0 - $1 }),
+
+        "=" : Operation.equals
+    ]
+    
+    //Mutating method because it changes values within the struct (we need to tell swift that this struct copy is going to change its values)
+    mutating func performOperation(_ symbol: String) {
+        if let operation = operations[symbol] {
+            switch operation {
+            case .constant(let value):
+                accumulator = value
+            case .unaryOperation(let function):
+                if accumulator != nil {
+                    accumulator = function(accumulator!)
+                }
+            case .binaryOperation(let function):
+                if accumulator != nil {
+                    pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
+                    accumulator = nil
+                }
+            case .equals:
+                performPendingBinaryOperation()
+            }
+        }
+    }
+    
+    mutating private func performPendingBinaryOperation() {
+        if pendingBinaryOperation != nil && accumulator != nil {
+            accumulator = pendingBinaryOperation!.perform(with: accumulator!)
+            pendingBinaryOperation = nil
+        }
+    }
+    
+    
+    private var pendingBinaryOperation: PendingBinaryOperation?
+    
+    //create another struct to be the pending binary operation ie 5*3...
+    private struct PendingBinaryOperation {
+        let function: (Double, Double) -> Double
+        let firstOperand: Double
+        
+        func perform(with secondOperand: Double) -> Double {
+            return function(firstOperand, secondOperand)
+        }
     }
     
     //function that sets the calculators total
@@ -40,7 +97,5 @@ struct CalculatorBrain {
             return accumulator
         }
     }
-    
-    
-    
+
 }
