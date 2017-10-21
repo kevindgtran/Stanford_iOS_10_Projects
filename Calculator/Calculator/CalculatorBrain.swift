@@ -8,12 +8,7 @@
 
 import Foundation
 
-//create a global function that changes the sign of a number
-func changeSign(operand: Double) -> Double {
-    return -operand
-}
-
-//create a type struct called CalculatorBrain that has all of our calculator "brains" - model - "the apps API"
+//create a struct called CalculatorBrain that has all of our calculator "brains" - model - "the apps API"
 struct CalculatorBrain {
     
     //create a private "internal" variable called accumulator. Whis is an optional b/c it may/ may not have a value at times.
@@ -33,13 +28,12 @@ struct CalculatorBrain {
         "e" : Operation.constant(M_E),
         "√" : Operation.unaryOperation(sqrt),
         "cos" : Operation.unaryOperation(cos),
+        //closures instead of creating multiple methods to call, infering the types from the enum
         "±" : Operation.unaryOperation({ -$0 }),
-        //closures for the remaining binaryOperations, infering the types from the enum case binaryOperation
         "*" : Operation.binaryOperation({ $0 * $1 }),
         "/" : Operation.binaryOperation({ $0 / $1 }),
         "+" : Operation.binaryOperation({ $0 + $1 }),
         "-" : Operation.binaryOperation({ $0 - $1 }),
-
         "=" : Operation.equals
     ]
     
@@ -71,7 +65,6 @@ struct CalculatorBrain {
         }
     }
     
-    
     private var pendingBinaryOperation: PendingBinaryOperation?
     
     //create another struct to be the pending binary operation ie 5*3...
@@ -97,5 +90,4 @@ struct CalculatorBrain {
             return accumulator
         }
     }
-
 }
