@@ -5,8 +5,6 @@ import PlaygroundSupport
 
 //Notes from Stanford's Developing iOS 9 Apps course
 
-
-
 //What's an API? Collection of functions & methods. In an app the API is all the functions and methods we create in the "brain" - Model of the app
 //What operating system does an Iphone run? UNIX
 //What makes up a computer? CPU "Brain", RAM "Memory", Hard Disk "Instructional/ Data"
