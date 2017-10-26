@@ -60,6 +60,23 @@ import Foundation
 
 //How do you make a UIColor transparent programmatically? Calling the withAlphaComponent() method on the UIColor type method and passing in a value from 0-1 (0 = fully transparent, 1 = opaque)
 
+//What do IBDesignable and IBInspectable do? Allow us to see the changes in real time in interface builder
+
+//Describe Property Observers? Execute code whenever a properties values change even if its changing to the same value. We declare them with the willSet and didSet observers
+
+//what are type properties? Properties that belong to the type itself rather than instance properties. This type property will only ever have one value no matter how many instances are created. So they're "universal values". They're declared with the "static" keyword
+
+//Whats the difference between the Gyroscope vs. Accellerometer? Gyroscope = orientation(direction), Accellerometer = velocity (speed)
+
+//what does the final keyword do? It makes the class, method or property unable to be overrided when subclassed
+
+//Whats initialization? The process of getting an instance of a class, struct, enum ready to use. This process involves setting initial values with special "initializer methods". All classes and structs must set all their properties to initial values in order for an instance to be created
+
+
+
+
+
+
 
 
 
