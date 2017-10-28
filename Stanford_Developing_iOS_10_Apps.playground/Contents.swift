@@ -72,49 +72,24 @@ import Foundation
 
 //Whats initialization? The process of getting an instance of a class, struct, enum ready to use. This process involves setting initial values with special "initializer methods". All classes and structs must set all their properties to initial values in order for an instance to be created
 
+//When assigning a closure or function to a stored property, what do the empty parenthesis after the curly brackets mean? The empty parenthesis tell swift to execute the closure immediately after the instance is initialized and to assign the return value to the stored property
+
+//What is the difference between as? and as! As refers to downcasting, because the type may or may not be there, its either optional and empty with returns nil. Or we can force unwrap it - only if we are certain the type is present
+
+//What is the "is" keyword? It checks the type if it is a certain type
+
+//Public API within app - Any dynamic code that isn't private
 
 
 
 
-
-
-
-
-
-
-
-//Interview Questions & notes:
-
-
+//////////////////////////////
 
 //Grokking notes:
 //Explain what Divide & Concur does? Divide and conqure is a way to think of a solution to a problem. First you determine the base case (simple case). Then you create a repeatable action (recursion) to reach the base case.
 //NOTE: Often when writing a recursive function involving arrays, the base case is often an empty array or an array with only one element
 
-//sum up an array using recursion
-//func sum(_ arr: [Int]) {
-//    //base case (simplest case)
-//    if arr.isEmpty {
-//        print(0)
-//    } else {
-//        //add the first element with
-//        print(arr[0] + sum(arr.remove(at: 0)))
-//    }
-//}
-//sum([1,2,3])
-
-//func factorial(_ value: Int) -> Int {
-//    if value == 0 {
-//        return 1
-//    }
-//
-//    return value * factorial(value - 1)
-//}
-//factorial(3)
-
-//var list1 = [1,2,3]
-//var list2 = list1.remo
-
+/////////////////////////////
 
 
 //CTCI notes:
@@ -133,6 +108,13 @@ import Foundation
 //What is the usually runtime of an algorithm that's inputs get halved each time? O(log N). log is the opposite of exponents and that's what log base 2 is here. "2 to what power will equal N => 2^4 = 16 => log2 16 = 4 => O(log 16) => O(logN)"
 //
 
+///////////////////////////////////
+
+//CS101 - Stanford
+//computers = powerful + stupid
+//code = instructions. Run = goes through and executes the instructions
+//images = pixels of RGB scale. Every pixel has RGB values (each 0-255)
+//
 
 
 
