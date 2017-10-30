@@ -116,6 +116,34 @@ import Foundation
 //images = pixels of RGB scale. Every pixel has RGB values (each 0-255)
 //
 
+///////////////////////////////////
+//Food Tracker App
+//What does the app delegate do? The app delegate class creates the window where your app's content is drawn and provides a place to respond to state transitions. It creates an entry point to the app and a run loop that delivers input events to the app, this is done in the UIApplicationMain. Calling the UIApplicationMain function creates an application object, which is responsible for managing the life cycle of the app. Then launches the app.
+//What property does the AppDelegate class have? It has only one, the window property. This optional property stores a reference to the apps window, which represents the root of the app's view hierarchy.
+//What do all the methods in the AppDelegate do? These methods let the application object communicate with the app delegate. Each method is called automatically when the app states change
+//What are the objects used to construct the user interface(UI) and display content to the user called? Views, they're the buttons, labels, etc. All view objects are of type UIView or one of its subclasses.
+//Whats the relationship between the scene, view, viewcontroller? The scene represents one screen on the app and typically one viewcontroller. The viewcontroller manages a single content view with its hierarchy of subviews, and coordinates the flow of data from the data model (apps data) to the views. Views handle orientation changes, user input and navigation
+//What do outlets do? They connect our interface objects with our source files
+//NOTE: The weak keyword indicates that the reference does not prevent the system from deallocating the referenced object. Weak references help prevent reference cycles; however, to keep the object alive and in memory you need to make sure some other part of your app has a strong reference to the object. In this case, it’s the text field’s superview. A superview maintains a strong reference to all of its subviews. As long as the superview remains alive and in memory, all of the subviews remain alive as well. Similarly, the view controller has a strong reference to its content view—keeping the entire view hierarchy alive and in memory.
+//When a view controller is loaded from a storyboard, the system instantiates the view hierarchy and assigns the appropriate values to all the view controller’s outlets. By the time the view controller’s viewDidLoad() method is called, the system has assigned valid values to all of the controller’s outlets, and you can safely access their contents.
+//You only need an outlet to an interface object if you plan to either access a value from the interface object or modify the interface object in your code. In this case, you need to set the text field’s delegate property and set the label’s text property. You won’t be modifying the button, so there’s no reason to create an outlet for it.
+//An action (or an action method) is a piece of code that’s linked to an event that can occur in your app. When that event takes place, the system execute’s the action’s code. You can define an action method to accomplish anything from manipulating a piece of data to updating the user interface. You use actions to drive the flow of your app in response to user or system events.
+//In IBActions what does the sender argument represent? The sender represents the object responsible for triggering the action
+//Explain the target-action design pattern? Design where one object sends a message to another object when a specific event occurs
+//Whats does "first responder" mean? Means that object is the first in line to recieve app events. ie clicking on a uitextfield and the text field becomes the first responder and displays the keyboard - making it the first responder. After the user is done typing the "resignFirstResponder" needs to be called so the textfield object is no longer the firstResponder and next events can be routed to other objects
+//How can we give views the some "control" capabilities of a control object (UIImage as a UIButton/ UISlider)? With Gesture recognizers - they're objects that can be attached to views and allow views to respond like control objects. Gesture recognizers interpret certain touches (swipe, pinch, rotation) then can execute certain actions based on that interpreted gesture touch
+
+
+
+
+
+//Swift summit notes
+//reflection - swift compiler vs static typing
+//the expression problem
+//The responder chain
+//Keypaths
+//Equatable
+//runtime source
 
 
 
