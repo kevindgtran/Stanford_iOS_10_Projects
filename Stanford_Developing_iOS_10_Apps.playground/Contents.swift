@@ -138,13 +138,28 @@ import Foundation
 
 
 //Swift summit notes
-//reflection - swift compiler vs static typing
-//the expression problem
-//The responder chain
-//Keypaths
-//Equatable
-//runtime source
+//Parse - third party library (Cocoapod & github) that connects our app to the Parse cloud platform. Parse gives us tons of features like a backend, configuring servers, managing databases, writing API's, storing videos/ images, user authentication, deployment processes, sync data across platforms, user analytics, connect to third party integration, push notifications, etc.
+//ARkit - Uses the camera and motion features to create augmented reality apps
+//Server Side Swift - Server side (backend) of application written in swift. Some popular frameworks are Perfect & Vapor
 
+
+
+//Cocoapods - staticly linked library?, binary?, Swift !=binary combatibility
+//Fastlane
+//PromiseKit
+//couchbase
+//serverless with swift
+//keypaths?
+//Equatable?
+//UITesting
+//GCD
+//Codable, Encodable and Decodable protocols
+//alamo fire + AFNetworking (SwiftyJSON + Gloss)
+//Design patterns
+//persisting data - localized storage
+//Rendering images
+//WWDC videos
+//react-native
 
 
 
