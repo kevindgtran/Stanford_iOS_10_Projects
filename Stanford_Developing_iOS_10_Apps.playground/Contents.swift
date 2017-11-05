@@ -141,25 +141,30 @@ import Foundation
 //Parse - third party library (Cocoapod & github) that connects our app to the Parse cloud platform. Parse gives us tons of features like a backend, configuring servers, managing databases, writing API's, storing videos/ images, user authentication, deployment processes, sync data across platforms, user analytics, connect to third party integration, push notifications, etc.
 //ARkit - Uses the camera and motion features to create augmented reality apps
 //Server Side Swift - Server side (backend) of application written in swift. Some popular frameworks are Perfect & Vapor
+//REST - Acronym for how web servers transfer data, they send "representations" of the objects back and forth
+//Codable, Encodable and Decodable protocols - swift 4 release to parse JSON/ XML/ Plist data with Swift. Conforming to the Coding protocol inherits (de/en)coding for free!
+//Fastlane - third party framework to quickly launch iOS and Android apps, handles tedious tasks like screen shots and code signing a releasing the app
+//PromiseKit - library to help with asynchronous tasks
+//couchbase - a NoSQL database for mobile apps - manages and stores data locally on the device - stored in a json formatted document with full CRUD capabilities
+//Webpack - complies one JS file into another helping with compiling sass, use require, code splitting, etc. Helps split your app into multiple files
+//react-native - Javascript framework to build both iOS and Android apps. Open sourced, save time in recompiling (constant updates)
 
-
-
-//Cocoapods - staticly linked library?, binary?, Swift !=binary combatibility
-//Fastlane
-//PromiseKit
-//couchbase
-//serverless with swift
 //keypaths?
 //Equatable?
 //UITesting
 //GCD
-//Codable, Encodable and Decodable protocols
 //alamo fire + AFNetworking (SwiftyJSON + Gloss)
 //Design patterns
 //persisting data - localized storage
 //Rendering images
 //WWDC videos
-//react-native
+
+
+
+
+
+
+
 
 
 
