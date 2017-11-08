@@ -161,7 +161,34 @@ import Foundation
 
 
 
+var numbersArr = [Int]()
+numbersArr = [1,2,3,4]
 
+var num = -12
+type(of: num)
+
+let newNum = String(num)
+type(of: newNum)
+
+
+//sum up all values in numbersArr
+//print(numbersArr.reduce(0, {sum, number in sum + number}))
+
+//mult each element by 2
+//print(numbersArr.map({return $0 * 2}))
+
+//return all odds
+//print(numbersArr.filter({return $0 % 2 != 0}))
+
+//filter out all the 3's
+//print(numbersArr.filter({return $0 == 3}))
+//var newArr = [Int]()
+//for i in numbersArr {
+//    if i == 3 {
+//        newArr.append(i)
+//    }
+//}
+//newArr
 
 
 
