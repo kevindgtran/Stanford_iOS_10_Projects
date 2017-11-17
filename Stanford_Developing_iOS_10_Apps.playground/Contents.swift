@@ -161,14 +161,14 @@ import Foundation
 
 
 
-var numbersArr = [Int]()
-numbersArr = [1,2,3,4]
-
-var num = -12
-type(of: num)
-
-let newNum = String(num)
-type(of: newNum)
+//var numbersArr = [Int]()
+//numbersArr = [1,2,3,4]
+//
+//var num = -12
+//type(of: num)
+//
+//let newNum = String(num)
+//type(of: newNum)
 
 
 //sum up all values in numbersArr
